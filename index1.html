@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <link href="css/stile.css" rel="stylesheet">
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet"> este es el de bostrap lo saque para hacer css de la pagina-->
+    <!--<link href="css/bootstrap.min.css.map" rel="stylesheet">-->
+    <!--<link href="css/font-awesome.min.css" rel="stylesheet">-->
+    
+    <!--<script src="/js/index2.js"></script>-->
+    </head>
+<body class="fondo">
+   
+    <section id="elegir-mascota">
+        <h1 class="title">Pokemon  🔥💧🌱</h1>
+        <h2 class="subtitulo">Elige tu mascota:</h2>
+        <br>
+        <h3 class="titulo-mascotas">Mascotas:</h3>
+
+        <div class="tarjetas">
+        
+        <br><label class="tajeta-mascota" for="pikachu">
+            <p>Pikachu</p>
+            <img src="/img/mokepons_mokepon_ratigueya_attack.png">
+        </label>
+        <input type="radio" name="mascota" id="pikachu" class="btn btn-danger" />
+
+
+        <label class="tajeta-mascota" for="bulbasaur">
+            <p>Bulbasaur</p>
+            <img src="/img/mokepons_mokepon_capipepo_attack.png" alt="pikachu">
+        </label>
+        <input type="radio" name="mascota" id="bulbasaur" class="btn btn-danger" />
+
+        <label class="tajeta-mascota" for="charmander">
+            <p>Charmander<p>
+            <img src="/img/mokepons_mokepon_hipodoge_attack.png">
+            </label>
+        <input type="radio" name="mascota" id="charmander" class="btn btn-danger" />
+        <br>
+        <br>
+
+
+
+        </div>
+        <button type="button" class="btn btn-secondary" id="boton-mascota">Seleccionar</button>
+    </section>
+    <br>
+    <section id="elegir-ataque">
+
+        <h1 class="title">Pokemon  🔥💧🌱</h1>
+
+        <h2 class="subtitulo">Elige tu ataque</h2>
+
+        <div class="tipos-ataques">
+            <button type="button" class="ataques" id="boton-fuego">Fuego!🔥</button>
+            <button type="button" class="ataques" id="boton-agua">Agua!💧</button>
+            <button type="button" class="ataques" id="boton-tierra">Tierra!🌱</button>
+        </div>
+
+        <div>
+            <div id="mensajes">
+            <p id="resultado"> Mucha suerte <!DOCTYPE html></p>
+
+            
+            </div>
+            <section id="reiniciar">
+                <button id="boton-reinicio" type="button" class="btn btn-warning">Reiniciar</button>
+            </section>
+
+
+            
+
+            
+        </div>
+
+        <div class="ataque">
+            <div>
+                <div id="ataque-jugador"></div>
+                <div><span id="mascota"></span></div>
+                <p>Tu mascota tiene  <span id="vidas-jugador"> 3 </span> vidas!!</p>
+            </div>
+            <div>
+                <div id="ataque-enemigo"></div>
+                <h6>Vas a pelear contra : <span id="mascota-enemigo"></span></h6>
+                <p>Las mascotas del enemigo tiene <span id="vidas-enemigo"> 3 </span>vidas!!</p>
+            </div>
+
+            
+        </div>
+
+    
+        
+    </section>
+   
+    
+</body>
+<script src="/js/index.js"></script>
+</html>
