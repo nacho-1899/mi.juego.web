@@ -3,7 +3,7 @@ body {
     background-image: url(/img/pokemon_x_and_y_battle_background_11_by_phoenixoflight92_d843okx-fullview.jpg);
     /*font-family: "Poppins", sans-serif;*/
     /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
-    background-size: 135%;
+    background-size: 110%;
   }
 .title{
     color: white;
@@ -21,7 +21,7 @@ body {
 .tajeta-mascota{
     width: 150px;
     height: 150px;
-    background: blue;
+    background-color: #11468F;
     padding: 10px;
     margin: 20px;
     text-align: center;
@@ -94,7 +94,7 @@ input{
     display: none;
 }
 #mensajes{
-    height: 180px;
+    height: 100px;
     width: 280px;
     border: red;
     background-color: white;
@@ -113,10 +113,28 @@ input{
 .ataque{
     display: grid;
     grid-template-columns: 100px 100px;
-    align-items: stretch
+    align-items: stretch;
+    
 }
 @media (max-width: 360px){
     .tarjetas{
         flex-direction: column;
     }
 }
+.info1{
+    width: 90%; 
+    color: white;
+    margin-right: 6px;
+    background-color: #11468F;
+    text-align: center;
+    border-radius: 20px; 
+}
+.info2{ 
+    width: 90%;
+    color: white;
+    margin-right: 6px;
+    background-color: #11468F;
+    text-align: center;
+    border-radius: 20px; 
+}
+ 

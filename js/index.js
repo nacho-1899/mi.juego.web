@@ -10,15 +10,15 @@ console.log(resultados)
 
 function ataqueFuego(){
     
-    ataqueJugador = "FUEGO"
+    ataqueJugador = "FUEGO 🔥"
     //ataqueAleatorioEnemigo()
 }
 function ataqueAgua(){
-    ataqueJugador = "AGUA"
+    ataqueJugador = "AGUA 💧"
     //ataqueAleatorioEnemigo()
 }
 function ataqueIierra(){
-    ataqueJugador = "TIERRA"
+    ataqueJugador = "TIERRA 🌱"
     //ataqueAleatorioEnemigo()
 }
 
@@ -27,17 +27,15 @@ function ataqueAleatorioEnemigo(){
     let ataqueAleatorioEnemigo = aleatorio(1,3);
     //console.log(ataqueAleatorioEnemigo);
     if (ataqueAleatorioEnemigo == 1){
-        ataqueEnemigo = "FUEGO"
+        ataqueEnemigo = "FUEGO 🔥"
         //alert(" Te ataca con "+ ataqueEnemigo)
     }else if (ataqueAleatorioEnemigo ==2 ) {
-        ataqueEnemigo = "AGUA"
+        ataqueEnemigo = "AGUA 💧"
         //alert(" Te atacan con "+ ataqueEnemigo)
     }else if (ataqueAleatorioEnemigo == 3){
-        ataqueEnemigo = "TIERRA"
+        ataqueEnemigo = "TIERRA 🌱"
         //alert(" Te atacan con "+ ataqueEnemigo)
     }
-
-    
 
 }
 
@@ -97,7 +95,7 @@ function mascota(){
    let seleccionAtaque = document.getElementById("elegir-ataque");
    seleccionAtaque.style.display = 'flex';
    let seleccionm = document.getElementById("elegir-mascota");
-    seleccionm.style.display = 'none';
+   seleccionm.style.display = 'none';
 
 }
 
@@ -140,7 +138,7 @@ function combate() {
         spanVidasEnemigo.innerHTML = vidasEnemigo;
         //crearMensaje("GANASTE")
     } else if(ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO') {
-        resultados = "Ganaaste"
+        resultados = "Ganaste"
         vidasEnemigo-- 
         spanVidasEnemigo.innerHTML = vidasEnemigo;
         //crearMensaje("GANASTE")
@@ -149,7 +147,15 @@ function combate() {
         vidasEnemigo-- 
         spanVidasEnemigo.innerHTML = vidasEnemigo;
         //crearMensaje("GANASTE")
-    } else {
+    } else if(ataqueJugador == 'FUEGO' && ataqueEnemigo == 'AGUA') {
+        resultados = "Ganaste"
+        vidasEnemigo-- 
+        spanVidasEnemigo.innerHTML = vidasEnemigo;
+        }else if(ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA') {
+            resultados = "Ganaste"
+            vidasEnemigo-- 
+            spanVidasEnemigo.innerHTML = vidasEnemigo;
+        }else{
         resultados = "Perdiste"
         vidasJugador-- 
         spanVidasJugador.innerHTML = vidasJugador;
@@ -162,7 +168,7 @@ function revisarVidas(){
     if(vidasEnemigo==0){
         mostrarMensajeFinal("Felicitaciones!! Ganaste")
     }else if(vidasJugador==0){
-        mostrarMensajeFinal("PERDISTE")
+        mostrarMensajeFinal("PERDISTE, Intentalo otra vez!!")
     }
 
 }
@@ -188,6 +194,10 @@ document.addEventListener("DOMContentLoaded", function(e){
         //mostrarMensaje();
         combate();
         mostrarMensaje();
+        console.log(ataqueEnemigo);
+        console.log(ataqueJugador);
+        console.log(mascotaEnemigo);
+        console.log(mascota)
          
         
        
@@ -217,6 +227,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 });
 
 // clase  42 y 43 estas clases no las hice son de css. me aburri jajaj
+// VAMOS EN 45 NO ORGANIZE EL CODIGO
 
 
 
