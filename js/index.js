@@ -1,15 +1,31 @@
 
-//alert("Hola Bienvenido")
+let ataqueJugadores = document.getElementById("ataque-jugador");
+let ataqueEnemigos= document.getElementById("ataque-enemigo");
+
+let seleccionMensaje = document.getElementById("mensajes");
+let botonF = document.getElementById("boton-fuego");
+let botonT = document.getElementById("boton-agua");
+let botonA= document.getElementById("boton-tierra");
 
 let ataqueJugador
 let ataqueEnemigo
 let resultados
 let vidasJugador = 3
 let vidasEnemigo = 3
-console.log(resultados)
 
+
+class Mokepon{
+    constructor(nombre,foto,vidas){
+        this.nombre = nombre;
+        this.foto = foto;
+        this.vidas = vidas;
+    }
+}
+let pikachu = new Mokepon('pikachu','/img/mokepons_mokepon_ratigueya_attack.png',3);
+let bulbasaur = new Mokepon('bulbasaur','/img/mokepons_mokepon_capipepo_attack.png',3);
+let charmander = new Mokepon('charmander','/img/mokepons_mokepon_hipodoge_attack.png',3);
+console.log(pikachu);
 function ataqueFuego(){
-    
     ataqueJugador = "FUEGO 🔥"
     //ataqueAleatorioEnemigo()
 }
@@ -40,14 +56,12 @@ function ataqueAleatorioEnemigo(){
 }
 
 function mostrarMensaje(){
-    let seleccionMensaje = document.getElementById("resultado");
-    let ataqueJugadores = document.getElementById("ataque-jugador");
-    let ataqueEnemigos= document.getElementById("ataque-enemigo");
+    
 
-    //let notificacion = document.createElement('p');
-    let nuevoAtaqueJugador= document.createElement('p');
-    let nuevoAtaqueEnemigo = document.createElement('p');
-
+//let notificacion = document.createElement('p');
+let nuevoAtaqueJugador= document.createElement('p');
+let nuevoAtaqueEnemigo = document.createElement('p');
+let seleccionMensaje = document.getElementById("resultado");
     seleccionMensaje.innerHTML= resultados;
     nuevoAtaqueJugador.innerHTML = ataqueJugador;
     nuevoAtaqueEnemigo.innerHTML= ataqueEnemigo;
@@ -58,16 +72,13 @@ function mostrarMensaje(){
 }
 
 function mostrarMensajeFinal(resultadoFinal){
-    let seleccionMensaje = document.getElementById("mensajes");
+    
 
     //let parrafo = document.createElement('p')
     seleccionMensaje.innerHTML = resultadoFinal
     //seleccionMensaje.appendChild(parrafo);
-    let botonF = document.getElementById("boton-fuego");
     botonF.disabled= true;
-    let botonT = document.getElementById("boton-agua");
     botonT.disabled= true;
-    let botonA= document.getElementById("boton-tierra");
     botonA.disabled= true;
 }
 
@@ -76,7 +87,8 @@ function seleccionMascota(){
     //alert("Seleccionaste tu mascota");
 }
 function mascota(){
-   let mascota1= document.getElementById("pikachu").checked;
+   
+    let mascota1= document.getElementById("pikachu").checked;
    let mascota2 = document.getElementById("bulbasaur").checked;
    let mascota3 = document.getElementById("charmander").checked;
    if(mascota1=== true){
@@ -225,9 +237,12 @@ document.addEventListener("DOMContentLoaded", function(e){
      })
 
 });
+// VAMOS EN 48
 
-// clase  42 y 43 estas clases no las hice son de css. me aburri jajaj
-// VAMOS EN 45 NO ORGANIZE EL CODIGO
+/*AREGLOS A FUTURO*/
+
+/*AGREGAR ALERTA CORTE MODAL ASI FESTEJA CUANDO GANAS CON EFECTOS*/
+// uilizae api para imagenes personajes
 
 
 
