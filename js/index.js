@@ -107,7 +107,7 @@ function mascotaEnemigo(){
         document.getElementById("mascota-enemigo").innerHTML= mascotaEnemigo;
         
     }else if(mascotaAeleatorio == 2){
-        let mascotaEnemigo = "Bolbasur";
+        let mascotaEnemigo = "bulbasaur";
         document.getElementById("mascota-enemigo").innerHTML= mascotaEnemigo;
         
     //alert("pelea contra 2");

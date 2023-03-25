@@ -3,7 +3,7 @@ body {
     background-image: url(/img/pokemon_x_and_y_battle_background_11_by_phoenixoflight92_d843okx-fullview.jpg);
     /*font-family: "Poppins", sans-serif;*/
     /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
-    background-size: 110%;
+    background-size: 200%;
   }
 .title{
     color: white;
@@ -35,7 +35,7 @@ body {
 .subtitulo{
     font-family: 'Bebas Neue', cursive;
     font-size: 20px;
-    color:white
+    color:white;
     
     
     
