@@ -6,6 +6,7 @@ let seleccionMensaje = document.getElementById("mensajes");
 let botonF = document.getElementById("boton-fuego");
 let botonT = document.getElementById("boton-agua");
 let botonA= document.getElementById("boton-tierra");
+const contenedorTarjetas = document.getElementById("contenedorTarjetas");
 
 let ataqueJugador
 let ataqueEnemigo
@@ -13,18 +14,46 @@ let resultados
 let vidasJugador = 3
 let vidasEnemigo = 3
 
+let mokepones =[];
 
 class Mokepon{
     constructor(nombre,foto,vidas){
         this.nombre = nombre;
         this.foto = foto;
         this.vidas = vidas;
+        this.ataques =[];
     }
 }
 let pikachu = new Mokepon('pikachu','/img/mokepons_mokepon_ratigueya_attack.png',3);
 let bulbasaur = new Mokepon('bulbasaur','/img/mokepons_mokepon_capipepo_attack.png',3);
 let charmander = new Mokepon('charmander','/img/mokepons_mokepon_hipodoge_attack.png',3);
-console.log(pikachu);
+
+mokepones.push(pikachu,bulbasaur,charmander);
+
+charmander.ataques.push(
+    {nombre:'💧', id:'boton-agua'},
+    {nombre:'💧', id:'boton-agua'},
+    {nombre:'💧', id:'boton-agua'},
+    {nombre:'⚡', id:'boton-tierra'},
+    {nombre:'🔥', id:'boton-fuego'}
+)
+charmander.ataques.push(
+    {nombre:'🔥', id:'boton-fuego'},
+    {nombre:'🔥', id:'boton-fuego'},
+    {nombre:'🔥', id:'boton-fuego'},
+    {nombre:'⚡', id:'boton-tierra'},
+    {nombre:'💧', id:'boton-agua'}
+)
+pikachu.ataques.push(
+    {nombre:'⚡', id:'boton-tierra'},
+    {nombre:'⚡', id:'boton-tierra'},
+    {nombre:'⚡', id:'boton-tierra'},
+    {nombre:'🔥', id:'boton-fuego'}, 
+    {nombre:'💧', id:'boton-agua'}
+)
+
+
+
 function ataqueFuego(){
     ataqueJugador = "FUEGO 🔥"
     //ataqueAleatorioEnemigo()
@@ -34,7 +63,7 @@ function ataqueAgua(){
     //ataqueAleatorioEnemigo()
 }
 function ataqueIierra(){
-    ataqueJugador = "TIERRA 🌱"
+    ataqueJugador = "RAYO ⚡"
     //ataqueAleatorioEnemigo()
 }
 
@@ -49,7 +78,7 @@ function ataqueAleatorioEnemigo(){
         ataqueEnemigo = "AGUA 💧"
         //alert(" Te atacan con "+ ataqueEnemigo)
     }else if (ataqueAleatorioEnemigo == 3){
-        ataqueEnemigo = "TIERRA 🌱"
+        ataqueEnemigo = "RAYO ⚡"
         //alert(" Te atacan con "+ ataqueEnemigo)
     }
 
@@ -184,9 +213,11 @@ function revisarVidas(){
     }
 
 }
+
 function reiniciarJuego(){
     location.reload();
 }
+
 document.addEventListener("DOMContentLoaded", function(e){
     let seleccionAtaque = document.getElementById("elegir-ataque");
     seleccionAtaque.style.display = 'none';
@@ -194,6 +225,17 @@ document.addEventListener("DOMContentLoaded", function(e){
 
     let elegirJugador = document.getElementById("boton-mascota");
     elegirJugador.addEventListener('click',seleccionMascota);
+
+    mokepones.forEach((mokepones) => {
+        opcionDeMokepones = `
+        <label class="tajeta-mascota" for=${mokepones.nombre}>
+        <p>${mokepones.nombre}</p>
+        <img src=${mokepones.foto}>
+        </label><input type="radio" name="mascota" id=${mokepones.nombre} class="btn btn-danger" />
+        `
+        contenedorTarjetas.innerHTML += opcionDeMokepones;
+    })
+    // busca los elementos del array y los imprime
 
     document.getElementById('boton-mascota').addEventListener('click',()=>{
         mascota();
@@ -237,12 +279,13 @@ document.addEventListener("DOMContentLoaded", function(e){
      })
 
 });
-// VAMOS EN 48
+// VAMOS EN 50 7:51.
 
 /*AREGLOS A FUTURO*/
 
 /*AGREGAR ALERTA CORTE MODAL ASI FESTEJA CUANDO GANAS CON EFECTOS*/
 // uilizae api para imagenes personajes
+// en github aparece mal :(
 
 
 
